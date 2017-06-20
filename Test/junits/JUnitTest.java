@@ -1,21 +1,22 @@
-package calci;
-
+package junits;
+import org.junit.Assert;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
+import calci.calciUtil;
 
-import junit.framework.Assert;
 
 public class JUnitTest {
 
 	
 	//calciUtil calsi = new calciUtil();
-	calciUtil calsi = null;
+	//calciUtil calsi = null;
+	
+	calciUtil calci = null;
 	
 	
 	@Before
 	public void setUp(){
-		calsi = new calciUtil();
+		calci = new calciUtil();
 	}
 	
 	
@@ -23,14 +24,14 @@ public class JUnitTest {
 	public void addTest(){
 		
 		
-		Assert.assertEquals(10, calsi.add(5, 5));
+		Assert.assertEquals(10, calci.add(5, 5));
 	}
 	
 	@Test
 	public void subtractTest(){
 		
 		
-		Assert.assertEquals(0, calsi.subtract(5, 5));
+		Assert.assertEquals(0, calci.subtract(5, 5));
 	}
 	
 	
@@ -38,14 +39,16 @@ public class JUnitTest {
 	public void multiplyTest(){
 		
 		
-		Assert.assertEquals(25, calsi.multiply(5, 5));
+		Assert.assertEquals(25, calci.multiply(5, 5));
 	}
 	
 	@Test
 	public void devideTest(){
 		
 		
-		Assert.assertEquals(1, calsi.devide(5, 5));
+		Assert.assertEquals(1, calci.devide(5, 5));
 	}
+	
+	
 	
 }
